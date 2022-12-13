@@ -40,13 +40,25 @@ public class Staff : Person
     }
 
 }
-    public class Database{
-    public Person[] People=new Person[50];
-    private int currentIndex=0;
-    public void AddStudent(Student student){
-        People[currentIndex++]=student;
+  public class Database
+{
+    private int _currentIndex;
+    public Person[] People = new Person[50];
+    public void AddStudent(Student student)
+    {
+        People[_currentIndex++] = student;
     }
-    public void AddStaff(Staff staff){
-        People[currentIndex++]=staff;
+    public void AddStaff(Staff staff)
+    {
+        People[_currentIndex++] = staff;
     }
+    public void PrintAll()
+    {
+        for (int i = 0; i <= _currentIndex; i++)
+        {
+            Console.WriteLine($"{i + 1} -{People[i]}");
+        }
+
+    }
+
 }
