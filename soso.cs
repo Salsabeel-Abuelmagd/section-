@@ -24,4 +24,3 @@ public class Student :Person{
         Console.WriteLine($"My name is{Name},my age is{Age},and gpa is {Gpa}");
     }
 }
-}}
