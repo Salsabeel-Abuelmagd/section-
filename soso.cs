@@ -24,6 +24,22 @@ public class Student :Person{
         Console.WriteLine($"My name is{Name},my age is{Age},and gpa is {Gpa}");
     }
 }
+public class Staff : Person
+{
+    public double Salary;
+    public int JoinYear;
+    public Staff(string name, int age, double salary, int joinyear) : base(name, age)
+    {
+        Salary = salary;
+        JoinYear = joinyear;
+    }
+    public override void Print()
+    {
+        Console.WriteLine
+        ($"Name: {Name}, Age: {Age}, Salary: {Salary} , JoinYear : {JoinYear}");
+    }
+
+}
     public class Database{
     public Person[] People=new Person[50];
     private int currentIndex=0;
