@@ -24,3 +24,13 @@ public class Student :Person{
         Console.WriteLine($"My name is{Name},my age is{Age},and gpa is {Gpa}");
     }
 }
+    public class Database{
+    public Person[] People=new Person[50];
+    private int currentIndex=0;
+    public void AddStudent(Student student){
+        People[currentIndex++]=student;
+    }
+    public void AddStaff(Staff staff){
+        People[currentIndex++]=staff;
+    }
+}
